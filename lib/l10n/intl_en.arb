@@ -1,1 +1,10 @@
-{}
+{
+    "@@locale": "en",
+    "Chose_your_language":"Chose your language",
+    "@Chose_your_language": {}
+    ,"continu":"continue",
+"@continu": {}
+
+
+
+}   

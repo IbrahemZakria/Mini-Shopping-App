@@ -1,3 +1,3 @@
 class Constant {
-  static const key = 'language';
+  static const languageCode = 'language';
 }

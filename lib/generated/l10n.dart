@@ -53,13 +53,32 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Chose your language`
+  String get Chose_your_language {
+    return Intl.message(
+      'Chose your language',
+      name: 'Chose_your_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `continue`
+  String get continu {
+    return Intl.message('continue', name: 'continu', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+      Locale.fromSubtags(languageCode: 'hi'),
+    ];
   }
 
   @override
