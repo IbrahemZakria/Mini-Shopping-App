@@ -7,8 +7,11 @@ part 'product_state.dart';
 
 class ProductCubit extends Cubit<ProductState> {
   ProductCubit(this.productrepo) : super(ProductInitial());
+
   final ProductRepo productrepo;
+  List<ProductModel> cart = [];
   Future getAllProduct() async {
+    emit(ProductLoadingState());
     var result = await productrepo.getAllProduct();
     result.fold(
       (failure) {

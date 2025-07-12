@@ -19,17 +19,7 @@ class ProductScreen extends StatelessWidget {
         ),
       )..getAllProduct(),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Mini Shopping"),
-          actions: [
-            IconButton(
-              onPressed: () {
-                BlocProvider.of<ProductCubit>(context).getAllProduct();
-              },
-              icon: Icon(Icons.abc),
-            ),
-          ],
-        ),
+        appBar: AppBar(title: Text("Mini Shopping")),
         body: ProductScreenBody(),
       ),
     );
