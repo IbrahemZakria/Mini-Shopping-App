@@ -4,7 +4,7 @@ import 'package:mini_shopping_app/core/widgts/user_message.dart';
 
 class ApiServises {
   final Dio _dio = Dio();
-  final String _baseUrl = 'https://fakestoreapi.com';
+  final String _baseUrl = 'https://fakestoreapi.com/';
 
   Future<dynamic> getData(String endpoint) async {
     try {

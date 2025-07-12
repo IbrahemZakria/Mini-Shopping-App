@@ -21,29 +21,28 @@ class SharedPreferance {
   }
 
   static T? getData<T>(String key) {
-  if (_preferences == null) return null;
+    if (_preferences == null) return null;
 
-  if (T == int) {
-    return _preferences!.getInt(key) as T?;
-  } else if (T == double) {
-    return _preferences!.getDouble(key) as T?;
-  } else if (T == bool) {
-    return _preferences!.getBool(key) as T?;
-  } else if (T == String) {
-    return _preferences!.getString(key) as T?;
-  } else if (T == List<String>) {
-    return _preferences!.getStringList(key) as T?;
-  } else {
-    throw Exception('Unsupported type');
+    if (T == int) {
+      return _preferences!.getInt(key) as T?;
+    } else if (T == double) {
+      return _preferences!.getDouble(key) as T?;
+    } else if (T == bool) {
+      return _preferences!.getBool(key) as T?;
+    } else if (T == String) {
+      return _preferences!.getString(key) as T?;
+    } else if (T == List<String>) {
+      return _preferences!.getStringList(key) as T?;
+    } else {
+      throw Exception('Unsupported type');
+    }
   }
-}
-
 
   static Future deletData({required String key}) async {
-     await _preferences?.remove(key);
+    await _preferences?.remove(key);
   }
 
   static Future clearData() async {
-     await _preferences?.clear();
+    await _preferences?.clear();
   }
 }
