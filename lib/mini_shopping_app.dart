@@ -15,7 +15,7 @@ class MiniShoppingApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      title: 'Flutter Demo',
+      title: 'Mini Shopping App - Product Listing with Cart',
     );
   }
 }

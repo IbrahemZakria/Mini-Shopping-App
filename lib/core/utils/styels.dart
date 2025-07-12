@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mini_shopping_app/constant.dart';
 
 abstract class Styles {
+  static const kprimarycolor = Color(0xff100B20);
+  static const kNavigateDuration = Duration(milliseconds: 500);
+  static const kwhitecolor = Color(0xfFFFFFFf);
+  static const kstarcolor = Color(0xfFFFDD4F);
   static const TextStyle textStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
