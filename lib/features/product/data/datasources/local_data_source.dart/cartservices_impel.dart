@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:hive/hive.dart';
 import 'package:mini_shopping_app/constant.dart';
 import 'package:mini_shopping_app/features/product/data/datasources/local_data_source.dart/cart_service_repo.dart';
@@ -17,8 +19,16 @@ class CartservicesImpel extends CartServiceRepo {
 
     bool iInCart = isProductInCart(product);
     if (iInCart) {
-      ProductEntity productEntity = box.get(product.id)!;
-      productEntity.itemcount! + 1;
+      ProductEntity productEntity = box.values.toList().firstWhere((p) {
+        return p.id == product.id;
+      });
+
+      productEntity.itemcount == null
+          ? productEntity.itemcount = 1
+          : productEntity.itemcount = productEntity.itemcount! + 1;
+
+      log("${productEntity.itemcount}kkll");
+      await productEntity.save();
     } else {
       await box.add(product);
     }

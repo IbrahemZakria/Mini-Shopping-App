@@ -8,18 +8,6 @@ class RemoteDataSourseImpel extends RemoteDataSourse {
   RemoteDataSourseImpel(this._apiServises);
 
   @override
-  Future<ProductModel> addProductToCart() {
-    // TODO: implement addProductToCart
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<ProductModel> deleteProductFromCart() {
-    // TODO: implement deleteProductFromCart
-    throw UnimplementedError();
-  }
-
-  @override
   Future<List<ProductModel>> getAllProduct() async {
     var response = await _apiServises.getData("products");
     List<ProductModel> products = [];

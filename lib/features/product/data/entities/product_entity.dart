@@ -28,7 +28,7 @@ class ProductEntity extends HiveObject {
   double? itemcount;
 
   ProductEntity({
-    this.itemcount = 0,
+    this.itemcount,
     this.id,
     this.title,
     this.price,
