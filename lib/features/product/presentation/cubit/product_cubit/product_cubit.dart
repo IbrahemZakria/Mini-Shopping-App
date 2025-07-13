@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:mini_shopping_app/features/product/data/models/product_model/product_model.dart';
-import 'package:mini_shopping_app/features/product/data/repositories/product_repo.dart';
+import 'package:mini_shopping_app/features/product/data/repositories/product_repo/product_repo.dart';
 
 part 'product_state.dart';
 

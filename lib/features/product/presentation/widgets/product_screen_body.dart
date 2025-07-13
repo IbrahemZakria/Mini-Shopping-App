@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mini_shopping_app/features/product/presentation/cubit/product_cubit.dart';
+import 'package:mini_shopping_app/features/product/presentation/cubit/product_cubit/product_cubit.dart';
 import 'package:mini_shopping_app/features/product/presentation/widgets/loading/product_loading_body.dart';
 import 'package:mini_shopping_app/features/product/presentation/widgets/product_success_body.dart';
 
