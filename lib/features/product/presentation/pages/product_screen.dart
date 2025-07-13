@@ -15,7 +15,7 @@ class ProductScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => ProductCubit(
         ProductRepoImpel(
-          RemoteDataSourcesImpel: RemoteDataSourseImpel(ApiServises()),
+          remoteDataSources: RemoteDataSourseImpel(ApiServises()),
         ),
       )..getAllProduct(),
       child: Scaffold(

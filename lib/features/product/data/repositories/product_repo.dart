@@ -4,6 +4,4 @@ import 'package:mini_shopping_app/features/product/data/models/product_model/pro
 
 abstract class ProductRepo {
   Future<Either<Failures, List<ProductModel>>> getAllProduct();
-  Future<Either<Failures, ProductModel>> addProductToCart();
-  Future<Either<Failures, ProductModel>> deleteProductFromCart();
 }

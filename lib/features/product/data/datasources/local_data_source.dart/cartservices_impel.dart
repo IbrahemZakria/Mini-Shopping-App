@@ -12,7 +12,7 @@ class CartservicesImpel extends CartServiceRepo {
   }
 
   @override
-  Future<void> addProductToCart(ProductEntity product) async {
+  Future<List<ProductEntity>> addProductToCart(ProductEntity product) async {
     Box<ProductEntity> box = Hive.box<ProductEntity>(Constant.productBox);
 
     bool iInCart = isProductInCart(product);
@@ -22,10 +22,14 @@ class CartservicesImpel extends CartServiceRepo {
     } else {
       await box.add(product);
     }
+    List<ProductEntity> carts = box.values.toList();
+    return carts;
   }
 
   @override
-  Future<void> deleteProductFromTheCart(ProductEntity product) async {
+  Future<List<ProductEntity>> deleteProductFromTheCart(
+    ProductEntity product,
+  ) async {
     Box<ProductEntity> box = Hive.box<ProductEntity>(Constant.productBox);
     bool iInCart = isProductInCart(product);
     if (iInCart) {
@@ -34,5 +38,7 @@ class CartservicesImpel extends CartServiceRepo {
     } else {
       await box.delete(product);
     }
+    List<ProductEntity> carts = box.values.toList();
+    return carts;
   }
 }
