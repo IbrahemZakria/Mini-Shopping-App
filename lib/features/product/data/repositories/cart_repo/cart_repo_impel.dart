@@ -17,7 +17,9 @@ class CartRepoImpel extends CartRepo {
   Future<List<ProductEntity>> deleteProductFromCart(
     ProductEntity product,
   ) async {
-    List<ProductEntity> cart = await cartServiceRepo.addProductToCart(product);
+    List<ProductEntity> cart = await cartServiceRepo.deleteProductFromTheCart(
+      product,
+    );
     return cart;
   }
 }

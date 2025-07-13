@@ -15,7 +15,7 @@ class CartCubit extends Cubit<CartState> {
 
     List<ProductEntity> products = await cartRepo.addProductToCart(product);
     log("${product.itemcount}");
-    emit(CartSuccessState());
+    emit(CartSuccessState(products: products));
     return products;
   }
 
@@ -28,7 +28,7 @@ class CartCubit extends Cubit<CartState> {
     );
     log("${products.length}");
 
-    emit(CartSuccessState());
+    emit(CartSuccessState(products: products));
     return products;
   }
 }
