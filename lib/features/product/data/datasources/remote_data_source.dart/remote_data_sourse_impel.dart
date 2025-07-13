@@ -1,5 +1,5 @@
 import 'package:mini_shopping_app/core/helper/services/api_servises.dart';
-import 'package:mini_shopping_app/features/product/data/datasources/remote_data_sourse.dart';
+import 'package:mini_shopping_app/features/product/data/datasources/remote_data_source.dart/remote_data_sourse.dart';
 import 'package:mini_shopping_app/features/product/data/models/product_model/product_model.dart';
 
 class RemoteDataSourseImpel extends RemoteDataSourse {
