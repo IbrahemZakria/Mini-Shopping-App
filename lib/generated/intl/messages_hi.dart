@@ -22,9 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Add_to_cart": MessageLookupByLibrary.simpleMessage("कार्ट में जोड़ें"),
     "Chose_your_language": MessageLookupByLibrary.simpleMessage(
       "अपनी भाषा चुनें",
     ),
+    "Delete_from_cart": MessageLookupByLibrary.simpleMessage("कार्ट से हटाएं"),
+    "buy": MessageLookupByLibrary.simpleMessage("खरीदना"),
+    "cart": MessageLookupByLibrary.simpleMessage("कार्ट"),
     "continu": MessageLookupByLibrary.simpleMessage("जारी रखना"),
+    "price": MessageLookupByLibrary.simpleMessage("कीमत"),
+    "rate": MessageLookupByLibrary.simpleMessage("दर"),
   };
 }

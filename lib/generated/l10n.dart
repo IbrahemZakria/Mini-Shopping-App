@@ -68,6 +68,41 @@ class S {
   String get continu {
     return Intl.message('continue', name: 'continu', desc: '', args: []);
   }
+
+  /// `rate`
+  String get rate {
+    return Intl.message('rate', name: 'rate', desc: '', args: []);
+  }
+
+  /// `price`
+  String get price {
+    return Intl.message('price', name: 'price', desc: '', args: []);
+  }
+
+  /// `cart`
+  String get cart {
+    return Intl.message('cart', name: 'cart', desc: '', args: []);
+  }
+
+  /// `Add to cart`
+  String get Add_to_cart {
+    return Intl.message('Add to cart', name: 'Add_to_cart', desc: '', args: []);
+  }
+
+  /// `buy`
+  String get buy {
+    return Intl.message('buy', name: 'buy', desc: '', args: []);
+  }
+
+  /// `Delete from cart`
+  String get Delete_from_cart {
+    return Intl.message(
+      'Delete from cart',
+      name: 'Delete_from_cart',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

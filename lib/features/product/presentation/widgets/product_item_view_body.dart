@@ -7,6 +7,7 @@ import 'package:mini_shopping_app/features/product/data/entities/product_entity.
 import 'package:mini_shopping_app/features/product/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:mini_shopping_app/features/product/presentation/pages/cart_screen.dart';
 import 'package:mini_shopping_app/features/product/presentation/widgets/iteme_image.dart';
+import 'package:mini_shopping_app/generated/l10n.dart';
 
 class ProductItemViewBody extends StatelessWidget {
   const ProductItemViewBody({super.key, required this.product});
@@ -14,6 +15,7 @@ class ProductItemViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var s = S.of(context);
     return BlocBuilder<CartCubit, CartState>(
       builder: (context, state) {
         return SafeArea(
@@ -53,17 +55,17 @@ class ProductItemViewBody extends StatelessWidget {
                     children: [
                       SizedBox(width: 6.3),
                       Text(
-                        "price: ${product.price!.toString()}",
+                        "${s.price}: ${product.price!.toString()}",
                         style: Styles.textStyle16,
                       ),
                       Spacer(),
                       Text(
-                        "rate: ${product.ratingCount!.toString()}",
+                        "${s.rate}: ${product.ratingCount!.toString()}",
                         style: Styles.textStyle16,
                       ),
                       Spacer(),
                       Text(
-                        "cart: ${getItemCountByProduct(product)}",
+                        "${s.cart}: ${getItemCountByProduct(product)}",
                         style: Styles.textStyle16,
                       ),
                     ],
@@ -77,7 +79,7 @@ class ProductItemViewBody extends StatelessWidget {
                             context,
                           ).addproductToCart(product);
                         },
-                        text: 'Add to cart',
+                        text: s.Add_to_cart,
                         width: MediaQuery.of(context).size.width * .4,
                       ),
                       SizedBox(width: 8),
@@ -88,7 +90,7 @@ class ProductItemViewBody extends StatelessWidget {
                             context,
                           ).deleteproductFromCart(product);
                         },
-                        text: 'Delete from cart',
+                        text: s.Delete_from_cart,
                         width: MediaQuery.of(context).size.width * .4,
                       ),
                     ],

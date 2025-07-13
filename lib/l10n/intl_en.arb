@@ -3,7 +3,18 @@
     "Chose_your_language":"Chose your language",
     "@Chose_your_language": {}
     ,"continu":"continue",
-"@continu": {}
+"@continu": {},
+"rate":"rate",
+"@rate": {},
+"price":"price",
+"@price": {},
+"cart":"cart",
+"@cart": {},
+"Add_to_cart":"Add to cart",
+"@Add_to_cart": {},"buy":"buy",
+"@buy": {},"Delete_from_cart":"Delete from cart",
+"@Delete_from_cart": {}
+
 
 
 

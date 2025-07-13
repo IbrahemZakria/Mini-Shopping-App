@@ -4,7 +4,18 @@
     "@Chose_your_language": {}
     
 ,"continu":"जारी रखना",
-"@continu": {}
+"@continu": {},
+"rate":"दर",
+"@rate": {},"price":"कीमत",
+"@price": {},
+"cart":"कार्ट",
+"@cart": {},
+"Add_to_cart":"कार्ट में जोड़ें",
+"@Add_to_cart": {}
+,
+"buy":"खरीदना",
+"@buy": {},"Delete_from_cart":"कार्ट से हटाएं",
+"@Delete_from_cart": {}
 
 
 }

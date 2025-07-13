@@ -7,6 +7,7 @@ import 'package:mini_shopping_app/features/product/data/entities/product_entity.
 import 'package:mini_shopping_app/features/product/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:mini_shopping_app/features/product/presentation/pages/product_item_view.dart';
 import 'package:mini_shopping_app/features/product/presentation/widgets/iteme_image.dart';
+import 'package:mini_shopping_app/generated/l10n.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key, required this.productEntity});
@@ -83,7 +84,7 @@ class ProductItem extends StatelessWidget {
                       Spacer(),
 
                       SizedBox(width: 6.3),
-                      Text("rate", style: Styles.textStyle16),
+                      Text(S.of(context).rate, style: Styles.textStyle16),
                       SizedBox(width: 8),
                       Text(
                         productEntity.ratingCount.toString(),

@@ -3,5 +3,17 @@
     ,"Chose_your_language":"اختر اللغه الخاصه بك",
     "@Chose_your_language": {}
     ,"continu":"اكمل",
-"@continu": {}
+"@continu": {},
+"rate":"التقيم",
+"@rate": {},
+"price":"السعر",
+"@price": {},
+"cart":"السله",
+"@cart": {},
+"Add_to_cart":"ضيف الى السله",
+"@Add_to_cart": {},
+"buy":"اشترى",
+"@buy": {},
+"Delete_from_cart":"حذف من السله",
+"@Delete_from_cart": {}
 }

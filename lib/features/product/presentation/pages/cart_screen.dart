@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_shopping_app/features/product/presentation/widgets/cart_screen_body.dart';
+import 'package:mini_shopping_app/generated/l10n.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -8,7 +9,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("cart")),
+      appBar: AppBar(title: Text(S.of(context).cart)),
       body: CartScreenBody(),
     );
   }
