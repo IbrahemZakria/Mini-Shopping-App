@@ -1,9 +1,9 @@
 import 'package:hive/hive.dart';
 
-part 'cart_model.g.dart';
+part 'product_entity.g.dart';
 
-@HiveType(typeId: 2)
-class CartModel extends HiveObject {
+@HiveType(typeId: 1) // تأكد إن الرقم ده مش مستخدم قبل كده
+class ProductEntity extends HiveObject {
   @HiveField(0)
   int? id;
 
@@ -24,8 +24,11 @@ class CartModel extends HiveObject {
 
   @HiveField(6)
   double? ratingCount;
+  @HiveField(7)
+  double? itemcount;
 
-  CartModel({
+  ProductEntity({
+    this.itemcount = 0,
     this.id,
     this.title,
     this.price,

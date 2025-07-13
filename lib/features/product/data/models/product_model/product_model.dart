@@ -1,6 +1,8 @@
+import 'package:mini_shopping_app/features/product/data/entities/product_entity.dart';
+
 import 'rating.dart';
 
-class ProductModel {
+class ProductModel extends ProductEntity {
   int? id;
   String? title;
   double? price;
@@ -17,7 +19,15 @@ class ProductModel {
     this.category,
     this.image,
     this.rating,
-  });
+  }) : super(
+         category: category,
+         description: description,
+         id: id,
+         title: title,
+         price: price,
+         image: image,
+         ratingCount: rating!.count!.toDouble(),
+       );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
     id: json['id'] as int?,
